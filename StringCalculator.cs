@@ -9,7 +9,7 @@ public class StringCalculator
        if(string.IsNullOrEmpty(numbers) || (numbers == "0"))
            return 0;
 
-       List <int> numbers = GettingNumbersList(numbers);
+       List <int> numbersList = GettingNumbersList(numbers);
        CheckNegativeNumbers(numbersList);
        return GetSum(numbersList);
     }
