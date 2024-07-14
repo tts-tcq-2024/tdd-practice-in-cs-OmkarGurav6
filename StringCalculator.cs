@@ -9,12 +9,17 @@ public class StringCalculator
        if(string.IsNullOrEmpty(numbers) || (numbers == "0"))
            return 0;
 
-       string[] delimiters = GetDelimiters(numbers, out string numbersWithoutDelimiters);
-       List <int> numbersList = GetNumbers(numbersWithoutDelimiters, delimiters);
+       List <int> numbers = GettingNumbersList(numbers);
        CheckNegativeNumbers(numbersList);
        return GetSum(numbersList);
     }
 
+    private List <int> GettingNumbersList(string numbers)
+    {
+        string[] delimiters = GetDelimiters(numbers, out string numbersWithoutDelimiters);
+        List <int> numbersList = GetNumbers(numbersWithoutDelimiters, delimiters);
+        return numbersList;
+    }
     
     private string[] GetDelimiters(string numbers, out string numbersWithoutDelimiters)
     {
