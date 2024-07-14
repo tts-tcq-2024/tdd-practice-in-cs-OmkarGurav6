@@ -9,16 +9,25 @@ public class StringCalculator
        if(string.IsNullOrEmpty(numbers) || (numbers == "0"))
            return 0;
 
-       string[] delimiters = GetDelimiters(numbers);
-       List <int> numbersList = GetNumbers(numbers, delimiters);
+       string[] delimiters = GetDelimiters(numbers, out string numbersWithoutDelimiters);
+       List <int> numbersList = GetNumbers(numbersWithoutDelimiters, delimiters);
        CheckNegativeNumbers(numbersList);
        return GetSum(numbersList);
     }
 
     
-    private string[] GetDelimiters(string numbers)
+    private string[] GetDelimiters(string numbers, out string numbersWithoutDelimiters)
     {
-        string[] delimiters = new string[] {",","\n"};        
+        string[] delimiters = new string[] {",","\n"};   
+
+        if (numbers.StartsWith("//"))
+        {
+            int delimiterEndIndex = numbers.IndexOf('\n');
+            string customDelimiter = numbers.Substring(2, delimiterEndIndex - 2);
+            delimiters = new string[] { customDelimiter };
+            numbersWithoutDelimiters = numbers.Substring(delimiterEndIndex + 1);
+        }
+        
         return delimiters;
     }
 
