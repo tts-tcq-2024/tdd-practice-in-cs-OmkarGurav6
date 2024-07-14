@@ -27,16 +27,16 @@ public class StringCalculatorAddTests
         Assert.Equal(expectedResult, result);
     }
 
-  // [Fact]
-  //   public void ExpectSumForTwoNumbers()
-  //   {
-  //       int expectedResult = 3;
-  //       string input = "1,2";
-  //       StringCalculator objUnderTest = new StringCalculator();
-  //       int result = objUnderTest.Add(input);
+  [Fact]
+    public void ExpectSumForTwoNumbers()
+    {
+        int expectedResult = 3;
+        string input = "1,2";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.Add(input);
 
-  //      Assert.Equal(expectedResult, result);
-  //   }
+       Assert.Equal(expectedResult, result);
+    }
 
   //   [Fact]
   //   public void ExpectExceptionForNegativeNumbers()
