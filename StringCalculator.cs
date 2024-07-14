@@ -18,7 +18,7 @@ public class StringCalculator
     
     private string[] GetDelimiters(string numbers)
     {
-        string[] delimiters = new string[] {","};        
+        string[] delimiters = new string[] {",","\n"};        
         return delimiters;
     }
 
