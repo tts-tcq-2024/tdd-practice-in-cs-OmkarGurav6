@@ -38,16 +38,16 @@ public class StringCalculatorAddTests
        Assert.Equal(expectedResult, result);
     }
 
-  //   [Fact]
-  //   public void ExpectExceptionForNegativeNumbers()
-  //   {
-  //       Assert.Throws<Exception>(() =>
-  //       {
-  //           string input = "-1,2";
-  //           StringCalculator objUnderTest = new StringCalculator();
-  //           objUnderTest.Add(input);
-  //       });
-  //   }
+    [Fact]
+    public void ExpectExceptionForNegativeNumbers()
+    {
+        Assert.Throws<Exception>(() =>
+        {
+            string input = "-1,2";
+            StringCalculator objUnderTest = new StringCalculator();
+            objUnderTest.Add(input);
+        });
+    }
 
   // [Fact]
   //   public void ExpectSumWithNewlineDelimiter()
