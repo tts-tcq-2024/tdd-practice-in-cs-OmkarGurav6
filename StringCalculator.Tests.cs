@@ -71,14 +71,14 @@ public class StringCalculatorAddTests
        Assert.Equal(expectedResult, result);
     }
 
-  //   [Fact]
-  //   public void ExpectSumWithCustomDelimiter()
-  //   {
-  //       int expectedResult = 3;
-  //       string input = "//;\n1;2";
-  //       StringCalculator objUnderTest = new StringCalculator();
-  //       int result = objUnderTest.Add(input);
+    [Fact]
+    public void ExpectSumWithCustomDelimiter()
+    {
+        int expectedResult = 3;
+        string input = "//;\n1;2";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.Add(input);
 
-  //      Assert.Equal(expectedResult, result);
-  //   }
+       Assert.Equal(expectedResult, result);
+    }
 }
