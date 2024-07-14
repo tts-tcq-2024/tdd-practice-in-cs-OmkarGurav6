@@ -18,6 +18,7 @@ public class StringCalculator
     
     private string[] GetDelimiters(string numbers, out string numbersWithoutDelimiters)
     {
+        numbersWithoutDelimiters = numbers;
         string[] delimiters = new string[] {",","\n"};   
 
         if (numbers.StartsWith("//"))
