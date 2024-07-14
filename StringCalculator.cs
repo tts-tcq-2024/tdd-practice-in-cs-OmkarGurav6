@@ -10,7 +10,7 @@ public class StringCalculator
            return 0;
 
        string[] delimiters = GetDelimiters(numbers);
-       List<int> numberList = GetNumbers(numbers, delimiters);
+       List<int> numbersList = GetNumbers(numbers, delimiters);
        return GetSum(numbersList);
     }
 
@@ -23,7 +23,7 @@ public class StringCalculator
 
      private List<int> GetNumbers(string numbers, string[] delimiters)
     {
-        return numbers.Split(delimiters).Select(int.Parse).ToList();
+        return numbers.Split(delimiters, StringSplitOptions.None).Select(int.Parse).ToList();
     }
 
     private int GetSum(List<int> numbers)
