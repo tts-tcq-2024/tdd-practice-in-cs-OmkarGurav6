@@ -49,16 +49,16 @@ public class StringCalculatorAddTests
         });
     }
 
-  // [Fact]
-  //   public void ExpectSumWithNewlineDelimiter()
-  //   {
-  //       int expectedResult = 6;
-  //       string input = "1\n2,3";
-  //       StringCalculator objUnderTest = new StringCalculator();
-  //       int result = objUnderTest.Add(input);
+  [Fact]
+    public void ExpectSumWithNewlineDelimiter()
+    {
+        int expectedResult = 6;
+        string input = "1\n2,3";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.Add(input);
 
-  //      Assert.Equal(expectedResult, result);
-  //   }
+       Assert.Equal(expectedResult, result);
+    }
 
   // [Fact]
   //   public void IgnoreNumbersGreaterThan1000()
