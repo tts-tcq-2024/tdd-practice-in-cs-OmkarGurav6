@@ -16,7 +16,7 @@ public class StringCalculatorAddTests
        Assert.Equal(expectedResult, result);
     }
 
-  [Fact]
+    [Fact]
     public void ExpectZeroForSingleZero()
     {
         int expectedResult = 0;
@@ -27,7 +27,7 @@ public class StringCalculatorAddTests
         Assert.Equal(expectedResult, result);
     }
 
-  [Fact]
+    [Fact]
     public void ExpectSumForTwoNumbers()
     {
         int expectedResult = 3;
@@ -49,7 +49,7 @@ public class StringCalculatorAddTests
         });
     }
 
-  [Fact]
+    [Fact]
     public void ExpectSumWithNewlineDelimiter()
     {
         int expectedResult = 6;
@@ -60,16 +60,16 @@ public class StringCalculatorAddTests
        Assert.Equal(expectedResult, result);
     }
 
-  // [Fact]
-  //   public void IgnoreNumbersGreaterThan1000()
-  //   {
-  //       int expectedResult = 1;
-  //       string input = "1,1001";
-  //       StringCalculator objUnderTest = new StringCalculator();
-  //       int result = objUnderTest.Add(input);
+    [Fact]
+    public void IgnoreNumbersGreaterThan1000()
+    {
+        int expectedResult = 1;
+        string input = "1,1001";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.Add(input);
 
-  //      Assert.Equal(expectedResult, result);
-  //   }
+       Assert.Equal(expectedResult, result);
+    }
 
   //   [Fact]
   //   public void ExpectSumWithCustomDelimiter()
