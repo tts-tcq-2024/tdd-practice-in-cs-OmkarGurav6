@@ -10,7 +10,8 @@ public class StringCalculator
            return 0;
 
        string[] delimiters = GetDelimiters(numbers);
-       List<int> numbersList = GetNumbers(numbers, delimiters);
+       List <int> numbersList = GetNumbers(numbers, delimiters);
+       CheckNegativeNumbers(numbersList);
        return GetSum(numbersList);
     }
 
@@ -26,7 +27,17 @@ public class StringCalculator
         return numbers.Split(delimiters, StringSplitOptions.None).Select(int.Parse).ToList();
     }
 
-    private int GetSum(List<int> numbers)
+    private void CheckNegativeNumbers(List <int> numbers)
+    {
+        List <int> negativeNumbers = numbers.Where(n => n < 0).ToList();
+        
+        if (negativeNumbers.Any())
+        {
+            throw new Exception("negatives not allowed : " + string.Join(",", negativeNumbers));
+        }
+    }
+    
+    private int GetSum(List <int> numbers)
     {
         return numbers.Where(n => n <= 1000).Sum();
     }
