@@ -16,16 +16,16 @@ public class StringCalculatorAddTests
        Assert.Equal(expectedResult, result);
     }
 
-  // [Fact]
-  //   public void ExpectZeroForSingleZero()
-  //   {
-  //       int expectedResult = 0;
-  //       string input = "0";
-  //       StringCalculator objUnderTest = new StringCalculator();
-  //       int result = objUnderTest.Add(input);
+  [Fact]
+    public void ExpectZeroForSingleZero()
+    {
+        int expectedResult = 0;
+        string input = "0";
+        StringCalculator objUnderTest = new StringCalculator();
+        int result = objUnderTest.Add(input);
 
-  //       Assert.Equal(expectedResult, result);
-  //   }
+        Assert.Equal(expectedResult, result);
+    }
 
   // [Fact]
   //   public void ExpectSumForTwoNumbers()
